@@ -91,7 +91,10 @@ function CartProvider({ children }) {
     }
   };
   // clear cart
-  const clearCart = () => {};
+  const clearCart = () => {
+    setCart([]);
+    localStorage.removeItem("cart");
+  };
 
   return (
     <CartContext.Provider
